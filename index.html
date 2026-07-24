@@ -3,87 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Dashboard</title>
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
 <body>
-    <section class="sidebar">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar">
+
+        <button class="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
         <div class="logo">
-            <h2>Admin Panel</h2>
+            <h2>MyAdmin</h2>
         </div>
-        <nav class="menu">
-            <a href="#" class="active">
-                <i class="fas fa-house"></i>
-                Dashboard
-            </a>
-            <a href="#">
-                <i class="fas fa-users"></i>
-                Users
-            </a>
-            <a href="#">
-                <i class="fas fa-box"></i>
-                Products
-            </a>
-            <a href="#">
-                <i class="fas fa-cart-shopping"></i>
-                Orders
-            </a>
-            <a href="#">
-                <i class="fas fa-chart-line"></i>
-                Sales
-            </a>
-            <a href="#">
-                <i class="fas fa-gear"></i>
-                Settings
-            </a>
-            <a href="#">
-                <i class="fas fa-right-from-bracket"></i>
-                Logout
-            </a>
+
+        <nav>
+            <ul>
+                <li class="active-d">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Courses</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
+
+    </aside>
+
+    <!-- ===== Main Area ===== -->
+    <div class="main">
+
+        <!-- Navbar -->
+        <header class="navbar">
+
+            <button class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <h1>Student Management System</h1>
+
+            <div class="profile">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+
+        </header>
+
+        <!-- Page Content -->
+    <main class="content">
+    <h2>Dashboard Overview</h2>
+
+    <!-- Statistics Cards -->
+    <section class="cards">
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+
+            <div class="card-info">
+                <h3>1,250</h3>
+                <p>Students</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fa-solid fa-book"></i>
+            </div>
+
+            <div class="card-info">
+                <h3>25</h3>
+                <p>Courses</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+
+            <div class="card-info">
+                <h3>48</h3>
+                <p>Teachers</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+            </div>
+
+            <div class="card-info">
+                <h3>₹45K</h3>
+                <p>Revenue</p>
+            </div>
+        </div>
+
     </section>
 
-    <main class="main-content">
-
-    <header class="navbar"> 
-        <div class="nav-left">
-            <button class="menu-btn">
-                <i class="fas fa-bars"></i>
+    <!-- Recent Students Table -->
+    <section class="table-section">
+        <div class="table-header">
+            <h2>Recent Students</h2>
+            <button class="add-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Student
             </button>
-            <h2>Dashboard</h2>
         </div>
-        <div class="nav-right">
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search...">
-            </div>
-            <i class="fas fa-bell notification"></i>
-            <div class="profile">
-                <img src="#" alt="Admin">
-                <span>Admin</span>
-            </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Virat Kholi</td>
+                        <td>Computer Science</td>
+                        <td>III</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Sachin Tendulka</td>
+                        <td>Information Technology</td>
+                        <td>II</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Rohit Sharma</td>
+                        <td>Mechanical</td>
+                        <td>IV</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Yuvaraj Singh</td>
+                        <td>Electronics</td>
+                        <td>I</td>
+                        <td><span class="status inactive">Inactive</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>105</td>
+                        <td>MS.Dhoni</td>
+                        <td>Civil</td>
+                        <td>III</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </header>
-
-        <section class="cards">
-
-        </section>
-
-        <section class="table-section">
-
-        </section>
-
-        <footer class="footer">
-
-        </footer>
-
-    </main>
-
-    <script src="script.js"></script>
-
+    </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
